@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/home"
+            android:title="Home"/>
+        <item android:id="@+id/addPat"
+            android:title="Add Patient"/>
+        <item android:id="@+id/updatePat"
+            android:title="Update Patient Info"/>
+        <item android:id="@+id/delPat"
+            android:title="Delete Patient"/>
+        <item android:id="@+id/viewPat"
+            android:title="View All Patients"/>
+    </group>
+
+    <item android:title="Doctor">
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item android:id="@+id/addDoc"
+                    android:title="Add Doctors"/>
+                <item android:id="@+id/viewDoc"
+                    android:title="View Doctors"/>
+                <item android:id="@+id/delDoc"
+                    android:title="Delete Doctors"/>
+            </group>
+        </menu>
+    </item>
+</menu>
