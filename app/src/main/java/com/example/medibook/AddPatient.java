@@ -7,26 +7,45 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class AddPatient extends AppCompatActivity{
 
     Button btn;
-    TextView tv;
+    TextView id,name,address,mobile,age,bg,sex;
+    PatientDatabaseHelper myDbPat;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_patient);
 
-        btn = findViewById(R.id.button);
+        btn = findViewById(R.id.addPatBtn);
+        id  = findViewById(R.id.editTextIDP);
+        name = findViewById(R.id.editTextNameP);
+        address = findViewById(R.id.editTextAddressP);
+        mobile = findViewById(R.id.editTextMobileP);
+        age = findViewById(R.id.editTextAgeP);
+        bg = findViewById(R.id.editTextBgP);
+        sex = findViewById(R.id.editTextSexP);
+        myDbPat = new PatientDatabaseHelper(this);
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                tv = findViewById(R.id.textView);
-                tv.setText("hello this is changed");
-                Intent intent = new Intent(AddPatient.this, MainActivity2.class);
-                startActivity(intent);
+                boolean isInserted = myDbPat.insertData(id.getText().toString(),name.getText().toString(),mobile.getText().toString(),
+                        address.getText().toString(), age.getText().toString(), bg.getText().toString(), sex.getText().toString());
+
+                if(isInserted) {
+                    Toast.makeText(AddPatient.this, "Added", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(AddPatient.this,MainActivity2.class));
+                }
+                else
+                    Toast.makeText(AddPatient.this, "Error! Try again", Toast.LENGTH_SHORT).show();
             }
+
         });
+
     }
 
 }
