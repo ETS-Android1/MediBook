@@ -5,13 +5,24 @@
             android:title="Home"/>
         <item android:id="@+id/addPat"
             android:title="Add Patient"/>
-        <item android:id="@+id/updatePat"
-            android:title="Update Patient Info"/>
+        <item android:id="@+id/searchPatient"
+            android:title="Search Patient"/>
         <item android:id="@+id/delPat"
             android:title="Delete Patient"/>
         <item android:id="@+id/viewPat"
             android:title="View All Patients"/>
     </group>
+
+    <item android:title="Patient History">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/addHistory"
+                    android:title="Add History"/>
+                <item android:id="@+id/searchHistory"
+                    android:title="Search History"/>
+            </group>
+        </menu>
+    </item>
 
     <item android:title="Doctor">
         <menu>

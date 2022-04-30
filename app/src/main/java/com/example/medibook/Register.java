@@ -1,8 +1,10 @@
 package com.example.medibook;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,6 +14,7 @@ import android.widget.Toast;
 public class Register extends AppCompatActivity {
 
     Button register;
+    AES aes = new AES();
     EditText username, password, password2;
     LoginDatabaseHelper myDbReg;
     @Override
@@ -25,6 +28,7 @@ public class Register extends AppCompatActivity {
         myDbReg = new LoginDatabaseHelper(this);
 
         register.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onClick(View view) {
                 String user = username.getText().toString();
@@ -33,7 +37,7 @@ public class Register extends AppCompatActivity {
 
                 if(pass.equals(pass2))
                 {
-                    boolean isInserted = myDbReg.insertCredentials(user,pass);
+                    boolean isInserted = myDbReg.insertCredentials(aes.encrypt(user),aes.encrypt(pass));
                     if(isInserted) {
                         Toast.makeText(Register.this, "Registered", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(Register.this,MainActivity.class));

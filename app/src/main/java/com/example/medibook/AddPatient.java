@@ -20,11 +20,11 @@ public class AddPatient extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_patient);
 
-        btn = findViewById(R.id.addPatBtn);
-        id  = findViewById(R.id.editTextIDP);
-        name = findViewById(R.id.editTextNameP);
-        address = findViewById(R.id.editTextAddressP);
-        mobile = findViewById(R.id.editTextMobileP);
+        btn = findViewById(R.id.addHistoryBtn);
+        id  = findViewById(R.id.editTextIDH);
+        name = findViewById(R.id.editTextDateH);
+        address = findViewById(R.id.editTextMedicationH);
+        mobile = findViewById(R.id.editTextRemarksH);
         age = findViewById(R.id.editTextAgeP);
         bg = findViewById(R.id.editTextBgP);
         sex = findViewById(R.id.editTextSexP);

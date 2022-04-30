@@ -7,21 +7,21 @@
     tools:context=".AddPatient">
 
     <EditText
-        android:id="@+id/editTextIDP"
+        android:id="@+id/editTextIDH"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="ID: P101"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNameP"
+        app:layout_constraintBottom_toTopOf="@+id/editTextDateH"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextNameP"
+        android:id="@+id/editTextDateH"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -36,7 +36,7 @@
         app:layout_constraintVertical_bias="0.152" />
 
     <EditText
-        android:id="@+id/editTextMobileP"
+        android:id="@+id/editTextRemarksH"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -51,7 +51,7 @@
         app:layout_constraintVertical_bias="0.268" />
 
     <EditText
-        android:id="@+id/editTextAddressP"
+        android:id="@+id/editTextMedicationH"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -111,7 +111,7 @@
         app:layout_constraintVertical_bias="0.742" />
 
     <Button
-        android:id="@+id/addPatBtn"
+        android:id="@+id/addHistoryBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add Patient"

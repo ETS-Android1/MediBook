@@ -17,8 +17,8 @@ public class DeleteDoctor extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delete_doctor);
-        editText = findViewById(R.id.editTextDeleteId);
-        button = findViewById(R.id.deleteConfirm);
+        editText = findViewById(R.id.editTextSearchH);
+        button = findViewById(R.id.searchBtnH);
         myDb = new DoctorDatabaseHelper(this);
 
         button.setOnClickListener(new View.OnClickListener() {

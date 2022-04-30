@@ -52,16 +52,24 @@ public class MainActivity2 extends AppCompatActivity{
                         startActivity(new Intent(MainActivity2.this,AddPatient.class));
                         break;
 
-                    case R.id.updatePat:
-                        startActivity(new Intent(MainActivity2.this,UpdatePatient.class));
-                        break;
-
                     case R.id.delPat:Pat:
                         startActivity(new Intent(MainActivity2.this,DeletePatient.class));
                         break;
 
+                    case R.id.searchPatient:
+                        startActivity(new Intent(MainActivity2.this,SearchPatient.class));
+                        break;
+
                     case R.id.viewPat:Pat:
                         startActivity(new Intent(MainActivity2.this,ViewAllPatient.class));
+                        break;
+
+                    case R.id.addHistory:
+                        startActivity(new Intent(MainActivity2.this,AddHistory.class));
+                        break;
+
+                    case R.id.searchHistory:
+                        startActivity(new Intent(MainActivity2.this, SearchHistory.class));
                         break;
 
                     case R.id.delDoc:

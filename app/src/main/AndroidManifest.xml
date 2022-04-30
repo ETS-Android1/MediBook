@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.medibook">
 
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MediBook">
+        <activity
+            android:name=".AddHistory"
+            android:exported="false" />
+        <activity
+            android:name=".SearchHistory"
+            android:exported="false" />
+        <activity
+            android:name=".SearchPatient"
+            android:exported="false" />
         <activity
             android:name=".Register"
             android:exported="false" />
@@ -31,10 +42,6 @@
         <activity
             android:name=".DeletePatient"
             android:label="Delete Patient Information"
-            android:parentActivityName=".MainActivity2" />
-        <activity
-            android:name=".UpdatePatient"
-            android:label="Update Patient Information"
             android:parentActivityName=".MainActivity2" />
         <activity
             android:name=".AddPatient"
