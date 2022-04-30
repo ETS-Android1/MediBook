@@ -13,16 +13,24 @@
         android:theme="@style/Theme.MediBook">
         <activity
             android:name=".AddHistory"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity2"
+            android:label="Add patient history"/>
         <activity
             android:name=".SearchHistory"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity2"
+            android:label="Search Patient History"/>
         <activity
             android:name=".SearchPatient"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity2"
+            android:label="Search for Patient"/>
         <activity
             android:name=".Register"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:label="Register to Login"/>
         <activity
             android:name=".AddDoctor"
             android:label="Add Doctor"
@@ -51,7 +59,8 @@
         <activity
             android:name=".MainActivity2"
             android:exported="false"
-            android:label="MediBook" />
+            android:label="MediBook"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">

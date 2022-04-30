@@ -57,6 +57,12 @@ public class PatientDatabaseHelper extends SQLiteOpenHelper {
         return res;
     }
 
+    public Boolean searchPatient(String id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery("select * from "+TABLE_NAME+" where ID = "+ id,null );
+        if(res.getCount()==0) return false;
+        else return true;
+    }
     public Integer deleteData (String id){
         SQLiteDatabase db = this.getWritableDatabase();
         return db.delete(TABLE_NAME,"ID = ?",new String[] { id });
